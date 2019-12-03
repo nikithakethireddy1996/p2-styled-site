@@ -1,0 +1,111 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--CSS Links-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        Nikitha Kethireddy
+    </title>
+</head>
+
+<body class='bgimg container-fluid'>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-transparent">
+        <a class="navbar-brand" href="#"><img src="resources/Me.jpg" class="rounded-corners" alt="Profile" width="75" height="75"></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current), </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="app.html">Volume Calculation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="qunittest.html">Qunit Link</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Submit</button>
+            </form>
+            
+        </ul>
+        </div>
+    </nav>
+    <hr>
+    <header>
+    </header>
+    <main class="container-fluid">
+        <div class="container">
+            <form id="contact" action="" method="post">
+                <h3>Computing the volume of Rectangular Prism</h3>
+                
+                     <fieldset class="mt-4">
+                        <label for="">Enter length value(1 to 100):</label>
+                        <input id="LengthValue" type="number" min="1" max="100" value="6">
+                        <span id="LengthValue" class="text-danger"></span>
+                      </fieldset>
+                      <fieldset class="mt-4">
+                        <label for="">Enter width value(1 to 100):</label>
+                        <input id="WidthValue" type="number" min="1" max="100" value="6">
+                        <span id="WidthValue" class="text-danger"></span>
+                      </fieldset>
+                      <fieldset class="mt-4">
+                        <label for="">Enter height value(1 to 100):</label>
+                        <input id="HeightValue" type="number" min="1" max="100" value="6">
+                        <span id="HeightValue" class="text-danger"></span>
+                      </fieldset>
+            </form>
+        </div>
+        <div class="col-md-5 mb-4">
+            <hr>
+            <button id="multiplyButton" class="btn btn-primary">Multiply</button>
+         
+            <hr>
+            <p id="result"></p>
+    
+          </div>
+          <div id="demo">
+            <h4>AJAX</h4>
+            <button type="button" onclick="loadDoc()">Verify</button>
+            </div>
+            
+            <script>
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("demo").innerHTML =
+                  this.responseText;
+                }
+              };
+              xhttp.open("GET", "ajaxtext.txt", true);
+              xhttp.send();
+            }
+            </script>
+    </main>
+    <section class="col-sm-10">
+        Here's the links to my
+        <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin fa-3x"></i></a>
+        and
+        <a href="https://github.com/nikithakethireddy1996"><i class="fa fa-github fa-3x"></i></a>
+        as well.
+    </section>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+          Nikitha Kethireddy
+          <span class="text-muted">Right-click / Inspect / Console</span>
+          &#9670;
+          &#9670;
+        </div>
+      </footer>
+      <script src="appcode.js"></script>
+</body>
